@@ -1,0 +1,339 @@
+INFO:root:initialize PEMS-BAY DataWrapper
+INFO:root:initialize data loader
+INFO:root:load search train inputs & labels
+INFO:root:load search train inputs & labels [ok]
+INFO:root:input shape: (36458, 2, 325, 12)
+INFO:root:label shape: (36458, 1, 325, 12)
+INFO:root:load search valid inputs & labels
+INFO:root:load search valid inputs & labels [ok]
+INFO:root:input shape: (5188, 2, 325, 12)
+INFO:root:label shape: (5188, 1, 325, 12)
+INFO:root:load train inputs & labels
+INFO:root:load train inputs & labels [ok]
+INFO:root:input shape: (36458, 2, 325, 12)
+INFO:root:label shape: (36458, 1, 325, 12)
+INFO:root:load valid inputs & labels
+INFO:root:load valid inputs & labels [ok]
+INFO:root:input shape: (5188, 2, 325, 12)
+INFO:root:label shape: (5188, 1, 325, 12)
+INFO:root:load test inputs & labels
+INFO:root:load test inputs & labels [ok]
+INFO:root:input shape: (10401, 2, 325, 12)
+INFO:root:label shape: (10401, 1, 325, 12)
+INFO:root:load architecture [epoch 1] from ./generated_params/PEMS_BAY_NASMTF/search.pth [ok]
+# of weight parameters 992
+# of arch parameters 30
+# of parameters 1022
+NAS {
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 12, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 12, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 12, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 12, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 12, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 12, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 325, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 325, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+}
+

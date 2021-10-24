@@ -1,0 +1,424 @@
+INFO:root:initialize METR-LA DataWrapper
+INFO:root:initialize data loader
+INFO:root:load search train inputs & labels
+INFO:root:load search train inputs & labels [ok]
+INFO:root:input shape: (23967, 2, 207, 12)
+INFO:root:label shape: (23967, 1, 207, 12)
+INFO:root:load search valid inputs & labels
+INFO:root:load search valid inputs & labels [ok]
+INFO:root:input shape: (3404, 2, 207, 12)
+INFO:root:label shape: (3404, 1, 207, 12)
+INFO:root:load train inputs & labels
+INFO:root:load train inputs & labels [ok]
+INFO:root:input shape: (23967, 2, 207, 12)
+INFO:root:label shape: (23967, 1, 207, 12)
+INFO:root:load valid inputs & labels
+INFO:root:load valid inputs & labels [ok]
+INFO:root:input shape: (3404, 2, 207, 12)
+INFO:root:label shape: (3404, 1, 207, 12)
+INFO:root:load test inputs & labels
+INFO:root:load test inputs & labels [ok]
+INFO:root:input shape: (6832, 2, 207, 12)
+INFO:root:label shape: (6832, 1, 207, 12)
+INFO:root:load architecture [fail]
+INFO:root:initialize the optimizer
+# of weight parameters 992
+# of arch parameters 30
+# of parameters 1022
+NAS {
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 12, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 12, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 12, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 12, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 12, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 12, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 6, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 6, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+    STCell {
+        mixed_op_1: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_1: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_1: 2
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.143, info: zero(),
+            op:1, prob: 0.143, info: identity(),
+            op:2, prob: 0.143, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:3, prob: 0.143, info: tc(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0),
+            op:4, prob: 0.143, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+            op:5, prob: 0.143, info: tatt(in_channels: 32, num_nodes: 207, in_length: 3, dropout: 0.1),
+            op:6, prob: 0.143, info: satt(in_channels: 32, out_channels: 32, num_nodes: 207, in_length: 3, gdep: 2, alpha: 0.05, dropout: 0.1),
+        }
+        mixed_op_2: 0
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+        mixed_op_2: 1
+        mixed_op {
+            mode: Mode.NONENone,
+            op:0, prob: 0.200, info: zero(),
+            op:1, prob: 0.200, info: identity(),
+            op:2, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 1], stride: [1, 1], padding: [0, 0], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:3, prob: 0.200, info: conv(in_channels: 32, out_channels: 32, kernel_size: [1, 3], stride: [1, 1], padding: [0, 1], dilation: [1, 1], use_bn: True, dropout: 0.1),
+            op:4, prob: 0.200, info: sc(in_channels: 32, out_channels: 32, graph_hiddens: [64, 16], num_graphs: 4, order: 2, use_bn: True, dropout: 0.2),
+        }
+    }
+}
+
+INFO:root:[search]	epoch[0]	batch[50]	time: 30.14	speed: 79.64 samples/s	mae: [ 5.547]	mae-horizon: [ 5.027  5.489  6.203]	mape: [ 15.774]	mape-horizon: [ 14.261  15.681  17.612]	rmse: [ 10.097]	rmse-horizon: [ 9.010  10.074  11.296]
+INFO:root:[search]	epoch[0]	batch[100]	time: 31.47	speed: 76.26 samples/s	mae: [ 4.952]	mae-horizon: [ 4.387  4.876  5.678]	mape: [ 14.107]	mape-horizon: [ 12.394  13.775  16.402]	rmse: [ 9.155]	rmse-horizon: [ 7.974  9.015  10.527]
+INFO:root:[search]	epoch[0]	batch[150]	time: 32.28	speed: 74.36 samples/s	mae: [ 4.720]	mae-horizon: [ 4.133  4.679  5.514]	mape: [ 13.370]	mape-horizon: [ 11.528  13.113  16.002]	rmse: [ 8.723]	rmse-horizon: [ 7.470  8.630  10.221]
+INFO:root:[search]	epoch[0]	batch[200]	time: 32.86	speed: 73.04 samples/s	mae: [ 4.534]	mae-horizon: [ 3.948  4.497  5.351]	mape: [ 12.740]	mape-horizon: [ 10.836  12.542  15.487]	rmse: [ 8.459]	rmse-horizon: [ 7.185  8.376  9.990]
+INFO:root:[search]	epoch[0]	batch[250]	time: 33.75	speed: 71.10 samples/s	mae: [ 4.415]	mae-horizon: [ 3.819  4.379  5.269]	mape: [ 12.378]	mape-horizon: [ 10.404  12.199  15.254]	rmse: [ 8.314]	rmse-horizon: [ 6.998  8.224  9.906]
+INFO:root:[search]	epoch[0]	batch[300]	time: 34.67	speed: 69.22 samples/s	mae: [ 4.315]	mae-horizon: [ 3.713  4.281  5.187]	mape: [ 12.030]	mape-horizon: [ 10.030  11.838  14.985]	rmse: [ 8.178]	rmse-horizon: [ 6.839  8.095  9.799]
+INFO:root:[search]	epoch[0]	batch[350]	time: 35.16	speed: 68.27 samples/s	mae: [ 4.240]	mae-horizon: [ 3.638  4.202  5.122]	mape: [ 11.751]	mape-horizon: [ 9.742  11.566  14.755]	rmse: [ 8.072]	rmse-horizon: [ 6.717  7.984  9.714]
+INFO:root:[search]	epoch[0]	batch[400]	time: 36.22	speed: 66.27 samples/s	mae: [ 4.173]	mae-horizon: [ 3.570  4.139  5.059]	mape: [ 11.553]	mape-horizon: [ 9.528  11.380  14.578]	rmse: [ 7.980]	rmse-horizon: [ 6.618  7.899  9.632]
+INFO:root:[search]	epoch[0]	batch[450]	time: 36.69	speed: 65.41 samples/s	mae: [ 4.128]	mae-horizon: [ 3.521  4.095  5.019]	mape: [ 11.420]	mape-horizon: [ 9.376  11.263  14.487]	rmse: [ 7.927]	rmse-horizon: [ 6.551  7.848  9.587]
+INFO:root:[search]	epoch[0]	batch[500]	time: 36.90	speed: 65.03 samples/s	mae: [ 4.098]	mae-horizon: [ 3.492  4.068  4.995]	mape: [ 11.353]	mape-horizon: [ 9.302  11.198  14.465]	rmse: [ 7.879]	rmse-horizon: [ 6.505  7.807  9.542]
+INFO:root:[search]	epoch[0]	time: 349.12	mae: [ 4.087]	mae-horizon: [ 3.481  4.056  4.984]	mape: [ 11.319]	mape-horizon: [ 9.266  11.164  14.434]	rmse: [ 7.866]	rmse-horizon: [ 6.488  7.791  9.530]
+INFO:root:[valid]	epoch[0]	batch[50]	time: 2.77	speed: 867.05 samples/s	mae: [ 3.973]	mae-horizon: [ 3.281  3.770  4.893]	mape: [ 10.654]	mape-horizon: [ 8.486  10.099  13.618]	rmse: [ 8.011]	rmse-horizon: [ 6.286  7.719  9.914]
+INFO:root:[valid]	epoch[0]	time: 3.50	mae: [ 3.851]	mae-horizon: [ 3.202  3.650  4.704]	mape: [ 10.207]	mape-horizon: [ 8.192  9.690  12.906]	rmse: [ 7.782]	rmse-horizon: [ 6.137  7.500  9.591]
+INFO:root:[eval]	epoch[0]	save parameters to ./generated_params/METR_LA_NASMTF/search.pth
+INFO:root:[test]	epoch[0]	batch[50]	time: 1.71	speed: 1406.19 samples/s	mae: [ 4.239]	mae-horizon: [ 3.459  4.029  5.285]	mape: [ 11.300]	mape-horizon: [ 8.940  10.727  14.563]	rmse: [ 8.327]	rmse-horizon: [ 6.511  8.019  10.332]
+INFO:root:[test]	epoch[0]	batch[100]	time: 1.41	speed: 1707.39 samples/s	mae: [ 4.446]	mae-horizon: [ 3.608  4.224  5.575]	mape: [ 12.140]	mape-horizon: [ 9.568  11.526  15.688]	rmse: [ 8.679]	rmse-horizon: [ 6.778  8.356  10.776]
+INFO:root:[test]	epoch[0]	time: 4.45	mae: [ 4.267]	mae-horizon: [ 3.491  4.057  5.310]	mape: [ 11.363]	mape-horizon: [ 9.028  10.810  14.585]	rmse: [ 8.381]	rmse-horizon: [ 6.579  8.078  10.378]
+INFO:root:[search]	epoch[1]	batch[50]	time: 36.85	speed: 65.13 samples/s	mae: [ 3.843]	mae-horizon: [ 3.188  3.783  4.769]	mape: [ 10.579]	mape-horizon: [ 8.340  10.268  13.695]	rmse: [ 7.593]	rmse-horizon: [ 6.078  7.534  9.341]
+INFO:root:[search]	epoch[1]	batch[100]	time: 36.95	speed: 64.95 samples/s	mae: [ 3.813]	mae-horizon: [ 3.195  3.767  4.741]	mape: [ 10.383]	mape-horizon: [ 8.336  10.256  13.492]	rmse: [ 7.496]	rmse-horizon: [ 6.029  7.415  9.261]
+INFO:root:[search]	epoch[1]	batch[150]	time: 37.07	speed: 64.74 samples/s	mae: [ 3.851]	mae-horizon: [ 3.228  3.813  4.795]	mape: [ 10.448]	mape-horizon: [ 8.328  10.304  13.639]	rmse: [ 7.503]	rmse-horizon: [ 6.027  7.434  9.290]
+INFO:root:[search]	epoch[1]	batch[200]	time: 37.01	speed: 64.85 samples/s	mae: [ 3.841]	mae-horizon: [ 3.225  3.810  4.776]	mape: [ 10.426]	mape-horizon: [ 8.306  10.327  13.630]	rmse: [ 7.462]	rmse-horizon: [ 5.992  7.391  9.233]
+INFO:root:[search]	epoch[1]	batch[250]	time: 37.05	speed: 64.78 samples/s	mae: [ 3.817]	mae-horizon: [ 3.201  3.786  4.750]	mape: [ 10.363]	mape-horizon: [ 8.233  10.262  13.567]	rmse: [ 7.442]	rmse-horizon: [ 5.968  7.376  9.220]
+INFO:root:[search]	epoch[1]	batch[300]	time: 37.41	speed: 64.15 samples/s	mae: [ 3.810]	mae-horizon: [ 3.194  3.780  4.738]	mape: [ 10.386]	mape-horizon: [ 8.260  10.291  13.577]	rmse: [ 7.441]	rmse-horizon: [ 5.974  7.379  9.205]
+INFO:root:[search]	epoch[1]	batch[350]	time: 37.82	speed: 63.45 samples/s	mae: [ 3.794]	mae-horizon: [ 3.178  3.764  4.723]	mape: [ 10.303]	mape-horizon: [ 8.194  10.198  13.502]	rmse: [ 7.426]	rmse-horizon: [ 5.957  7.361  9.191]
+INFO:root:[search]	epoch[1]	batch[400]	time: 37.06	speed: 64.76 samples/s	mae: [ 3.788]	mae-horizon: [ 3.172  3.762  4.718]	mape: [ 10.314]	mape-horizon: [ 8.197  10.210  13.537]	rmse: [ 7.438]	rmse-horizon: [ 5.972  7.380  9.194]
+INFO:root:[search]	epoch[1]	batch[450]	time: 37.13	speed: 64.64 samples/s	mae: [ 3.777]	mae-horizon: [ 3.161  3.750  4.702]	mape: [ 10.303]	mape-horizon: [ 8.182  10.202  13.521]	rmse: [ 7.422]	rmse-horizon: [ 5.957  7.362  9.182]
+INFO:root:[search]	epoch[1]	batch[500]	time: 37.41	speed: 64.15 samples/s	mae: [ 3.764]	mae-horizon: [ 3.149  3.736  4.685]	mape: [ 10.266]	mape-horizon: [ 8.158  10.165  13.472]	rmse: [ 7.401]	rmse-horizon: [ 5.938  7.340  9.151]
+INFO:root:[search]	epoch[1]	time: 381.07	mae: [ 3.763]	mae-horizon: [ 3.147  3.735  4.683]	mape: [ 10.252]	mape-horizon: [ 8.145  10.152  13.454]	rmse: [ 7.398]	rmse-horizon: [ 5.934  7.337  9.149]
+INFO:root:[valid]	epoch[1]	batch[50]	time: 1.85	speed: 1294.00 samples/s	mae: [ 3.618]	mae-horizon: [ 2.963  3.576  4.622]	mape: [ 10.249]	mape-horizon: [ 7.770  10.135  13.863]	rmse: [ 7.431]	rmse-horizon: [ 5.890  7.333  9.306]
+INFO:root:[valid]	epoch[1]	time: 2.57	mae: [ 3.498]	mae-horizon: [ 2.887  3.458  4.439]	mape: [ 9.848]	mape-horizon: [ 7.529  9.756  13.199]	rmse: [ 7.214]	rmse-horizon: [ 5.751  7.127  8.998]
+INFO:root:[eval]	epoch[1]	save parameters to ./generated_params/METR_LA_NASMTF/search.pth
+INFO:root:[test]	epoch[1]	batch[50]	time: 1.74	speed: 1379.19 samples/s	mae: [ 3.872]	mae-horizon: [ 3.141  3.824  4.997]	mape: [ 10.925]	mape-horizon: [ 8.269  10.788  14.832]	rmse: [ 7.721]	rmse-horizon: [ 6.107  7.617  9.694]
+INFO:root:[test]	epoch[1]	batch[100]	time: 1.40	speed: 1709.82 samples/s	mae: [ 4.072]	mae-horizon: [ 3.280  4.021  5.286]	mape: [ 11.841]	mape-horizon: [ 8.899  11.702  16.133]	rmse: [ 8.052]	rmse-horizon: [ 6.357  7.940  10.118]
+INFO:root:[test]	epoch[1]	time: 4.51	mae: [ 3.909]	mae-horizon: [ 3.178  3.862  5.034]	mape: [ 11.036]	mape-horizon: [ 8.390  10.913  14.916]	rmse: [ 7.788]	rmse-horizon: [ 6.185  7.686  9.756]
+INFO:root:[search]	epoch[2]	batch[50]	time: 37.42	speed: 64.14 samples/s	mae: [ 3.738]	mae-horizon: [ 3.126  3.724  4.643]	mape: [ 10.140]	mape-horizon: [ 8.016  10.102  13.242]	rmse: [ 7.339]	rmse-horizon: [ 5.914  7.298  9.039]
+INFO:root:[search]	epoch[2]	batch[100]	time: 37.02	speed: 64.83 samples/s	mae: [ 3.724]	mae-horizon: [ 3.100  3.713  4.635]	mape: [ 10.179]	mape-horizon: [ 7.979  10.151  13.384]	rmse: [ 7.373]	rmse-horizon: [ 5.924  7.350  9.069]
+INFO:root:[search]	epoch[2]	batch[150]	time: 37.04	speed: 64.79 samples/s	mae: [ 3.697]	mae-horizon: [ 3.083  3.688  4.596]	mape: [ 10.064]	mape-horizon: [ 7.900  10.029  13.212]	rmse: [ 7.348]	rmse-horizon: [ 5.900  7.322  9.044]
+INFO:root:[search]	epoch[2]	batch[200]	time: 36.85	speed: 65.13 samples/s	mae: [ 3.703]	mae-horizon: [ 3.083  3.691  4.611]	mape: [ 10.114]	mape-horizon: [ 7.920  10.065  13.295]	rmse: [ 7.376]	rmse-horizon: [ 5.911  7.348  9.088]
+INFO:root:[search]	epoch[2]	batch[250]	time: 37.47	speed: 64.05 samples/s	mae: [ 3.699]	mae-horizon: [ 3.084  3.686  4.603]	mape: [ 10.151]	mape-horizon: [ 7.975  10.089  13.334]	rmse: [ 7.365]	rmse-horizon: [ 5.913  7.328  9.073]
+INFO:root:[search]	epoch[2]	batch[300]	time: 37.37	speed: 64.22 samples/s	mae: [ 3.697]	mae-horizon: [ 3.081  3.684  4.604]	mape: [ 10.161]	mape-horizon: [ 7.964  10.081  13.400]	rmse: [ 7.357]	rmse-horizon: [ 5.911  7.329  9.056]
+INFO:root:[search]	epoch[2]	batch[350]	time: 37.49	speed: 64.01 samples/s	mae: [ 3.695]	mae-horizon: [ 3.083  3.683  4.599]	mape: [ 10.177]	mape-horizon: [ 7.995  10.110  13.418]	rmse: [ 7.353]	rmse-horizon: [ 5.915  7.324  9.045]
+INFO:root:[search]	epoch[2]	batch[400]	time: 36.97	speed: 64.92 samples/s	mae: [ 3.694]	mae-horizon: [ 3.079  3.682  4.601]	mape: [ 10.167]	mape-horizon: [ 7.979  10.096  13.424]	rmse: [ 7.359]	rmse-horizon: [ 5.916  7.328  9.057]
+INFO:root:[search]	epoch[2]	batch[450]	time: 37.56	speed: 63.89 samples/s	mae: [ 3.690]	mae-horizon: [ 3.078  3.676  4.599]	mape: [ 10.175]	mape-horizon: [ 7.992  10.096  13.441]	rmse: [ 7.358]	rmse-horizon: [ 5.918  7.321  9.060]
+INFO:root:[search]	epoch[2]	batch[500]	time: 37.58	speed: 63.87 samples/s	mae: [ 3.682]	mae-horizon: [ 3.071  3.667  4.586]	mape: [ 10.147]	mape-horizon: [ 7.973  10.077  13.402]	rmse: [ 7.342]	rmse-horizon: [ 5.912  7.305  9.037]
+INFO:root:[search]	epoch[2]	time: 381.84	mae: [ 3.677]	mae-horizon: [ 3.068  3.662  4.579]	mape: [ 10.132]	mape-horizon: [ 7.956  10.058  13.385]	rmse: [ 7.332]	rmse-horizon: [ 5.904  7.295  9.020]
+INFO:root:[valid]	epoch[2]	batch[50]	time: 1.77	speed: 1358.60 samples/s	mae: [ 3.589]	mae-horizon: [ 2.917  3.562  4.585]	mape: [ 10.107]	mape-horizon: [ 7.641  9.839  14.080]	rmse: [ 7.460]	rmse-horizon: [ 5.882  7.435  9.235]
+INFO:root:[valid]	epoch[2]	time: 2.48	mae: [ 3.465]	mae-horizon: [ 2.836  3.440  4.397]	mape: [ 9.693]	mape-horizon: [ 7.381  9.448  13.406]	rmse: [ 7.235]	rmse-horizon: [ 5.740  7.218  8.914]
+INFO:root:[eval]	epoch[2]	save parameters to ./generated_params/METR_LA_NASMTF/search.pth
+INFO:root:[test]	epoch[2]	batch[50]	time: 1.75	speed: 1370.61 samples/s	mae: [ 3.834]	mae-horizon: [ 3.092  3.808  4.932]	mape: [ 10.724]	mape-horizon: [ 8.137  10.452  14.898]	rmse: [ 7.734]	rmse-horizon: [ 6.086  7.709  9.583]
+INFO:root:[test]	epoch[2]	batch[100]	time: 1.41	speed: 1707.55 samples/s	mae: [ 4.034]	mae-horizon: [ 3.231  4.001  5.227]	mape: [ 11.631]	mape-horizon: [ 8.742  11.305  16.318]	rmse: [ 8.068]	rmse-horizon: [ 6.345  8.040  10.006]
+INFO:root:[test]	epoch[2]	time: 4.47	mae: [ 3.872]	mae-horizon: [ 3.129  3.844  4.975]	mape: [ 10.854]	mape-horizon: [ 8.249  10.578  15.068]	rmse: [ 7.800]	rmse-horizon: [ 6.169  7.779  9.641]
+INFO:root:[search]	epoch[3]	batch[50]	time: 37.27	speed: 64.40 samples/s	mae: [ 3.634]	mae-horizon: [ 3.045  3.634  4.508]	mape: [ 9.950]	mape-horizon: [ 7.945  9.961  12.994]	rmse: [ 7.255]	rmse-horizon: [ 5.930  7.269  8.836]
+INFO:root:[search]	epoch[3]	batch[100]	time: 38.16	speed: 62.89 samples/s	mae: [ 3.628]	mae-horizon: [ 3.028  3.613  4.512]	mape: [ 9.989]	mape-horizon: [ 7.902  9.891  13.178]	rmse: [ 7.230]	rmse-horizon: [ 5.864  7.218  8.841]
+INFO:root:[search]	epoch[3]	batch[150]	time: 37.19	speed: 64.54 samples/s	mae: [ 3.648]	mae-horizon: [ 3.068  3.638  4.515]	mape: [ 10.091]	mape-horizon: [ 8.012  10.008  13.274]	rmse: [ 7.203]	rmse-horizon: [ 5.865  7.190  8.805]
+INFO:root:[search]	epoch[3]	batch[200]	time: 37.65	speed: 63.74 samples/s	mae: [ 3.675]	mae-horizon: [ 3.086  3.663  4.543]	mape: [ 10.126]	mape-horizon: [ 8.026  10.050  13.278]	rmse: [ 7.259]	rmse-horizon: [ 5.898  7.252  8.860]
+INFO:root:[search]	epoch[3]	batch[250]	time: 37.51	speed: 63.99 samples/s	mae: [ 3.673]	mae-horizon: [ 3.083  3.664  4.540]	mape: [ 10.118]	mape-horizon: [ 7.989  10.050  13.296]	rmse: [ 7.239]	rmse-horizon: [ 5.874  7.230  8.843]
+INFO:root:[search]	epoch[3]	batch[300]	time: 37.57	speed: 63.88 samples/s	mae: [ 3.668]	mae-horizon: [ 3.074  3.656  4.541]	mape: [ 10.097]	mape-horizon: [ 7.957  10.010  13.298]	rmse: [ 7.236]	rmse-horizon: [ 5.865  7.224  8.845]
+INFO:root:[search]	epoch[3]	batch[350]	time: 37.65	speed: 63.74 samples/s	mae: [ 3.660]	mae-horizon: [ 3.066  3.648  4.535]	mape: [ 10.089]	mape-horizon: [ 7.955  10.013  13.282]	rmse: [ 7.234]	rmse-horizon: [ 5.861  7.221  8.851]
+INFO:root:[search]	epoch[3]	batch[400]	time: 37.27	speed: 64.39 samples/s	mae: [ 3.659]	mae-horizon: [ 3.063  3.645  4.534]	mape: [ 10.096]	mape-horizon: [ 7.948  10.013  13.320]	rmse: [ 7.238]	rmse-horizon: [ 5.866  7.220  8.859]
+INFO:root:[search]	epoch[3]	batch[450]	time: 37.60	speed: 63.83 samples/s	mae: [ 3.656]	mae-horizon: [ 3.058  3.643  4.532]	mape: [ 10.108]	mape-horizon: [ 7.942  10.022  13.344]	rmse: [ 7.246]	rmse-horizon: [ 5.869  7.225  8.869]
+INFO:root:[search]	epoch[3]	batch[500]	time: 38.06	speed: 63.05 samples/s	mae: [ 3.648]	mae-horizon: [ 3.050  3.634  4.524]	mape: [ 10.097]	mape-horizon: [ 7.924  10.011  13.351]	rmse: [ 7.235]	rmse-horizon: [ 5.858  7.211  8.858]
+INFO:root:[search]	epoch[3]	time: 385.02	mae: [ 3.650]	mae-horizon: [ 3.052  3.636  4.526]	mape: [ 10.103]	mape-horizon: [ 7.926  10.017  13.362]	rmse: [ 7.240]	rmse-horizon: [ 5.861  7.216  8.865]
+INFO:root:[valid]	epoch[3]	batch[50]	time: 1.79	speed: 1343.91 samples/s	mae: [ 3.643]	mae-horizon: [ 2.994  3.621  4.608]	mape: [ 10.231]	mape-horizon: [ 7.659  9.983  14.133]	rmse: [ 7.429]	rmse-horizon: [ 5.896  7.376  9.227]
+INFO:root:[valid]	epoch[3]	time: 2.49	mae: [ 3.525]	mae-horizon: [ 2.921  3.507  4.423]	mape: [ 9.827]	mape-horizon: [ 7.416  9.608  13.451]	rmse: [ 7.211]	rmse-horizon: [ 5.756  7.168  8.916]
+INFO:root:[test]	epoch[3]	batch[50]	time: 1.78	speed: 1346.99 samples/s	mae: [ 3.886]	mae-horizon: [ 3.164  3.860  4.958]	mape: [ 10.861]	mape-horizon: [ 8.149  10.596  14.988]	rmse: [ 7.702]	rmse-horizon: [ 6.108  7.646  9.574]
+INFO:root:[test]	epoch[3]	batch[100]	time: 1.40	speed: 1709.42 samples/s	mae: [ 4.083]	mae-horizon: [ 3.300  4.051  5.253]	mape: [ 11.764]	mape-horizon: [ 8.730  11.459  16.378]	rmse: [ 8.036]	rmse-horizon: [ 6.361  7.973  10.005]
+INFO:root:[test]	epoch[3]	time: 4.50	mae: [ 3.922]	mae-horizon: [ 3.199  3.895  5.000]	mape: [ 10.981]	mape-horizon: [ 8.254  10.724  15.125]	rmse: [ 7.770]	rmse-horizon: [ 6.184  7.717  9.640]
+INFO:root:[search]	epoch[4]	batch[50]	time: 37.51	speed: 63.98 samples/s	mae: [ 3.552]	mae-horizon: [ 2.974  3.560  4.388]	mape: [ 9.873]	mape-horizon: [ 7.654  9.910  13.158]	rmse: [ 7.090]	rmse-horizon: [ 5.727  7.100  8.667]
+INFO:root:[search]	epoch[4]	batch[100]	time: 37.95	speed: 63.23 samples/s	mae: [ 3.579]	mae-horizon: [ 3.009  3.587  4.397]	mape: [ 9.885]	mape-horizon: [ 7.737  9.842  12.949]	rmse: [ 7.100]	rmse-horizon: [ 5.755  7.114  8.655]
+INFO:root:[search]	epoch[4]	batch[150]	time: 37.46	speed: 64.06 samples/s	mae: [ 3.607]	mae-horizon: [ 3.017  3.611  4.461]	mape: [ 9.909]	mape-horizon: [ 7.769  9.871  13.008]	rmse: [ 7.175]	rmse-horizon: [ 5.778  7.184  8.789]
+INFO:root:[search]	epoch[4]	batch[200]	time: 37.66	speed: 63.72 samples/s	mae: [ 3.629]	mae-horizon: [ 3.028  3.624  4.501]	mape: [ 9.991]	mape-horizon: [ 7.801  9.913  13.166]	rmse: [ 7.210]	rmse-horizon: [ 5.804  7.214  8.834]
+INFO:root:[search]	epoch[4]	batch[250]	time: 37.63	speed: 63.78 samples/s	mae: [ 3.619]	mae-horizon: [ 3.021  3.613  4.490]	mape: [ 9.962]	mape-horizon: [ 7.781  9.884  13.142]	rmse: [ 7.205]	rmse-horizon: [ 5.806  7.205  8.828]
+INFO:root:[search]	epoch[4]	batch[300]	time: 37.71	speed: 63.64 samples/s	mae: [ 3.621]	mae-horizon: [ 3.022  3.617  4.491]	mape: [ 9.977]	mape-horizon: [ 7.795  9.909  13.142]	rmse: [ 7.206]	rmse-horizon: [ 5.809  7.206  8.826]
+INFO:root:[search]	epoch[4]	batch[350]	time: 37.46	speed: 64.06 samples/s	mae: [ 3.613]	mae-horizon: [ 3.020  3.609  4.479]	mape: [ 9.949]	mape-horizon: [ 7.778  9.886  13.108]	rmse: [ 7.195]	rmse-horizon: [ 5.809  7.193  8.812]
+INFO:root:[search]	epoch[4]	batch[400]	time: 37.26	speed: 64.41 samples/s	mae: [ 3.604]	mae-horizon: [ 3.017  3.600  4.462]	mape: [ 9.920]	mape-horizon: [ 7.757  9.852  13.085]	rmse: [ 7.173]	rmse-horizon: [ 5.802  7.172  8.774]
+INFO:root:[search]	epoch[4]	batch[450]	time: 37.45	speed: 64.09 samples/s	mae: [ 3.608]	mae-horizon: [ 3.021  3.600  4.469]	mape: [ 9.930]	mape-horizon: [ 7.785  9.849  13.086]	rmse: [ 7.171]	rmse-horizon: [ 5.799  7.166  8.778]
+INFO:root:[search]	epoch[4]	batch[500]	time: 37.09	speed: 64.71 samples/s	mae: [ 3.611]	mae-horizon: [ 3.023  3.604  4.472]	mape: [ 9.949]	mape-horizon: [ 7.788  9.874  13.119]	rmse: [ 7.179]	rmse-horizon: [ 5.804  7.170  8.787]
+INFO:root:[search]	epoch[4]	time: 384.19	mae: [ 3.612]	mae-horizon: [ 3.023  3.606  4.474]	mape: [ 9.953]	mape-horizon: [ 7.786  9.875  13.131]	rmse: [ 7.183]	rmse-horizon: [ 5.804  7.176  8.795]
+INFO:root:[valid]	epoch[4]	batch[50]	time: 1.79	speed: 1343.78 samples/s	mae: [ 4.393]	mae-horizon: [ 3.299  4.166  5.840]	mape: [ 14.904]	mape-horizon: [ 9.672  13.750  21.685]	rmse: [ 8.488]	rmse-horizon: [ 6.030  7.738  11.273]
+INFO:root:[valid]	epoch[4]	time: 2.50	mae: [ 4.274]	mae-horizon: [ 3.223  4.049  5.657]	mape: [ 14.463]	mape-horizon: [ 9.391  13.320  20.992]	rmse: [ 8.316]	rmse-horizon: [ 5.894  7.555  11.051]
+INFO:root:[test]	epoch[4]	batch[50]	time: 1.75	speed: 1375.33 samples/s	mae: [ 4.649]	mae-horizon: [ 3.457  4.407  6.231]	mape: [ 15.823]	mape-horizon: [ 10.219  14.565  23.141]	rmse: [ 8.807]	rmse-horizon: [ 6.237  8.019  11.721]
+INFO:root:[test]	epoch[4]	batch[100]	time: 1.41	speed: 1702.31 samples/s	mae: [ 4.945]	mae-horizon: [ 3.623  4.674  6.702]	mape: [ 17.449]	mape-horizon: [ 11.094  16.000  25.735]	rmse: [ 9.301]	rmse-horizon: [ 6.528  8.430  12.433]
+INFO:root:[test]	epoch[4]	time: 4.51	mae: [ 4.716]	mae-horizon: [ 3.497  4.465  6.335]	mape: [ 16.021]	mape-horizon: [ 10.339  14.735  23.433]	rmse: [ 8.947]	rmse-horizon: [ 6.330  8.132  11.915]
+INFO:root:[search]	epoch[5]	batch[50]	time: 37.70	speed: 63.65 samples/s	mae: [ 3.580]	mae-horizon: [ 3.015  3.564  4.403]	mape: [ 9.822]	mape-horizon: [ 7.660  9.735  13.008]	rmse: [ 7.076]	rmse-horizon: [ 5.764  7.037  8.642]
