@@ -1,0 +1,149 @@
+---
+sys:
+  seed: 1
+
+data:
+  path: PEMS-BAY
+  num_nodes: 325
+  in_length: 12
+  out_length: 12
+  in_channels: 2
+  out_channels: 1
+  batch_size_per_gpu: 32
+  train_prop: 0.7
+  valid_prop: 0.1
+
+model:
+  device_ids: [0]
+  name: PEMS_BAY_NASMTF
+  node_emb_dim: 20
+  graph_hidden: [8, 32]
+  hidden_channels: 32
+  scale_channels: 256
+  end_channels: 512
+  layer_structure: [[STCell], [STCell, STCell], [STCell, STCell]]
+  # layer_structure: [[STCell], [STCell, STCell]]
+  num_layer_per_cell: 3
+  candidate_op_profiles_1: [
+    [Zero, {
+
+    }],
+    [Identity, {
+
+    }],
+    [Conv, {
+      type_name: conv,
+      kernel_size: [1,1],
+      stride: [1,1],
+      padding: [0,0],
+      dilation: [1,1],
+      use_bn: True,
+      dropout: 0
+    }],
+    [TemporalConv, {
+      type_name: tc,
+      kernel_size: [1,3],
+      stride: [1,1],
+      padding: [0,1],
+      dilation: [1,1],
+      use_bn: True,
+      dropout: 0
+    }],
+    [SpatialGraphConv, {
+      input_graph_hidden: 32,
+      graph_hiddens: [64,16],
+      num_graphs: 4,
+      order: 2,
+      k: 20,
+      alpha: 0.05,
+      use_bn: True,
+      dropout: 0.2
+    }],
+    [TemporalAttention, {
+      type_name: tatt,
+      num_nodes: 325,
+      in_length: [12, 6, 6, 3, 3],
+      dropout: 0.1
+    }],
+    [SpatialAttention, {
+      type_name: satt,
+      num_nodes: 325,
+      in_length: [12, 6, 6, 3, 3],
+      gdep: 2,
+      alpha: 0.05,
+      dropout: 0.1
+    }],
+  ]
+  
+  candidate_op_profiles_2: [
+    [Zero, {
+
+    }],
+    [Identity, {
+
+    }],
+    [Conv, {
+      type_name: conv,
+      kernel_size: [1,1],
+      stride: [1,1],
+      padding: [0,0],
+      dilation: [1,1],
+      use_bn: True,
+      dropout: 0.1
+    }],
+    [Conv, {
+      type_name: conv,
+      kernel_size: [1,3],
+      stride: [1,1],
+      padding: [0,1],
+      dilation: [1,1],
+      use_bn: True,
+      dropout: 0.1
+    }],
+    [SpatialGraphConv, {
+      input_graph_hidden: 32,
+      graph_hiddens: [64,16],
+      num_graphs: 4,
+      order: 2,
+      k: 20,
+      alpha: 0.05,
+      use_bn: True,
+      dropout: 0.2
+    }],
+    # [TemporalAttention, {
+    #   type_name: tatt,
+    #   num_nodes: 325,
+    #   in_length: [12, 6, 6, 3, 3],
+    #   dropout: 0.1
+    # }],
+    # [SpatialAttention, {
+    #   type_name: satt,
+    #   num_nodes: 325,
+    #   in_length: [12, 6, 6, 3, 3],
+    #   gdep: 2,
+    #   alpha: 0.05,
+    #   dropout: 0.1
+    # }],
+  ]
+
+trainer:
+  arch_lr: 0.001
+  arch_lr_decay_milestones: [50,60,70,80]
+  arch_lr_decay_ratio: 0.1
+  arch_decay: 0.00001
+  arch_clip_gradient: 5
+  
+  weight_lr: 0.01
+  weight_lr_decay_milestones: [50,60,70,80]
+  weight_lr_decay_ratio: 0.1
+  weight_decay: 0.00001
+  weight_clip_gradient: 5
+
+  num_search_iterations: 64
+  num_search_arch_samples: 8
+  num_train_iterations: 500
+
+  criterion: 'masked_mae'
+  metric_names: ['mae', 'rmse', 'mape']
+  metric_indexes: [2,5,11]
+  print_frequency: 50
