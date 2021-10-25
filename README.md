@@ -19,21 +19,21 @@ The raw data is in http://pems.dot.ca.gov. This dataset is collected by Californ
 ## 4.2 Download the dataset
 
 ## 4.3 Neural Architecture Search
-```
+```python
 # Neural Architecture Search on PEMS_BAY
  python search.py --config config/PEMS_BAY_para.yaml |& tee logs/search_PEMS_BAY.log
  # Neural Architecture Search on METR_LA
  python search.py --config config/METR_LA_para.yaml |& tee logs/search_METR_LA.log
 ```
 ## 4.4Training
-```
+```python
 # Train on PEMS_BAY
 python train.py --config config/PEMS_BAY_para.yaml  |& tee logs/train_PEMS_BAY.log
 # Train on METR-LA
 python train.py --config config/METR_LA_para.yaml |& tee logs/train_METR_LA.log
 ```
 ## 4.5 Evaluating
-```
+```python
 # Evaluate on PEMS_BAY
 python test.py --config config/PEMS_BAY_para.yaml |& tee logs/test_PEMS_BAY.log
 # Evaluate on METR-LA
