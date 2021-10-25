@@ -10,7 +10,7 @@ This repo is the official implementation for Scale-Aware Neural Architecture Sea
 * math, sklearn, numpy
 # Datasets
 ## 1.1 METR-LA
-The raw data is in http://pems.dot.ca.gov.This dataset is collected by the Los Angeles Metropolitan Transportation Authority and contains the average traffic speed measured by 207 loop detectors on the highways of Los Angeles County between March 2012 and June 2012.
+The raw data is in http://pems.dot.ca.gov. This dataset is collected by the Los Angeles Metropolitan Transportation Authority and contains the average traffic speed measured by 207 loop detectors on the highways of Los Angeles County between March 2012 and June 2012.
 ## 1.2 PEMS-BAY
 The raw data is in.This dataset is collected by California Transportation Agencies and contains the average traffic speed measured by 325 sensors in the Bay Area between January 2017 and May 2017.
 # Running
