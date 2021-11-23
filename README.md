@@ -1,5 +1,5 @@
 # 1 SNAS4MTF
-This repo is the official implementation for Scale-Aware Neural Architecture Search for Multivariate Time Series Forecasting
+This repo is the official implementation for Scale-Aware Neural Architecture Search for Multivariate Time Series Forecasting.
 
 ## 1.1 The framework of SNAS4MTF
  ![framework](https://user-images.githubusercontent.com/18440709/142983473-f6bb12bd-266a-40ce-9116-00ce9a9f1059.jpg)
