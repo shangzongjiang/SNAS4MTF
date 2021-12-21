@@ -43,10 +43,10 @@ python test.py --config config/METR_LA_para.yaml |& tee logs/test_METR_LA.log
 # 5 Citation
 Please cite the following paper if you use the code in your work:
 ```
-@Inproceedings{616B,
-  title={Scale-Aware Neural Architecture Search for Multivariate Time Series Forecasting.},
-  author={Donghui Chen, Ling Chen, Youdong Zhang, et al.},
-  booktitle={},
+@article{chen2021scale,
+  title={Scale-Aware Neural Architecture Search for Multivariate Time Series Forecasting},
+  author={Chen, Donghui and Chen, Ling and Shang, Zongjiang and Zhang, Youdong and Wen, Bo and Yang, Chenghu},
+  journal={arXiv preprint arXiv:2112.07459},
   year={2021}
 }
 ```
