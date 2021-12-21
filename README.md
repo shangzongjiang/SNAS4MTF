@@ -45,7 +45,7 @@ Please cite the following paper if you use the code in your work:
 ```
 @article{chen2021scale,
   title={Scale-Aware Neural Architecture Search for Multivariate Time Series Forecasting},
-  author={Chen, Donghui and Chen, Ling and Shang, Zongjiang and Zhang, Youdong and Wen, Bo and Yang, Chenghu},
+  author={Donghui Chen, Ling Chen, Zongjiang Shang, Youdong Zhang, Bo Wen, and Chenghu Yang.},
   journal={arXiv preprint arXiv:2112.07459},
   year={2021}
 }
