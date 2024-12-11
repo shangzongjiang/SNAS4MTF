@@ -40,13 +40,28 @@ python test.py --config config/PEMS_BAY_para.yaml |& tee logs/test_PEMS_BAY.log
 # Evaluate on METR-LA
 python test.py --config config/METR_LA_para.yaml |& tee logs/test_METR_LA.log
 ```
-# 5 Citation
+# 5 Concat
+If you have any questions, please feel free to contact zongjiangshang@cs.zju.edu.cn
+
+# 6 Other works
+📝 Our other works are shown as follows：
+
+**Single-step forecasting**: Chen L, Chen D, Shang Z, et al. Multi-scale adaptive graph neural network for multivariate time series forecasting. TKDE, 2023, 35(10): 10748-10761.
+[Code Link](https://github.com/shangzongjiang/MAGNN)
+
+**Long-range & short-range & ultra-long-range time series forecasting**: Shang Z, Chen L, Wu B, et al. Ada-MSHyper: Adaptive multi-scale hypergraph transformer for time series forecasting. NeurIPS, 2024. [Code Link](https://github.com/shangzongjiang/Ada-MSHyper)
+
+**Long-range time series forecasting**: Shang Z, Chen L, Wu B, et al. MSHyper: Multi-scale hypergraph transformer for long-range time series forecasting. arXiv, 2024: arXiv: 2401.09261. [Code Link](https://github.com/shangzongjiang/MSHyper)
+
+# 7 Citation
 Please cite the following paper if you use the code in your work:
+
 ```
 @article{chen2021scale,
-  title={Scale-Aware Neural Architecture Search for Multivariate Time Series Forecasting},
-  author={Donghui Chen, Ling Chen, Zongjiang Shang, Youdong Zhang, Bo Wen, and Chenghu Yang.},
-  journal={arXiv preprint arXiv:2112.07459},
-  year={2021}
+  title={Scale-aware neural architecture search for multivariate time series forecasting},
+  author={Chen, Donghui and Chen, Ling and Shang, Zongjiang and Zhang, Youdong and Wen, Bo and Yang, Chenghu},
+  journal={ACM Transactions on Knowledge Discovery from Data},
+  year={2024},
+  publisher={ACM New York, NY}
 }
 ```
